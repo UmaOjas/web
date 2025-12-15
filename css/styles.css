@@ -1,18 +1,66 @@
 /* ----------------------------------------BODY---------------------------------------- */
+html {
+    box-sizing: border-box;
+}
 body {
     /* background-color: #E7E9FC; */
     background-color: #F4F4FD;
-    font-family: 'Roboto', 'Verdana', 'Tahoma', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #2E2F42;
+    /* display: block; */
 }
+
 ul, ol {
     list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 }
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 a {
     text-decoration: none;
 }
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.visually-hidden {
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ margin: -1px;
+ border: 0;
+ padding: 0;
+ white-space: nowrap;
+ clip-path: inset(100%);
+ clip: rect(0 0 0 0);
+ overflow: hidden;
+}
+/* -------------------------------------CONTAINER---------------------------------------- */
+.container { 
+max-width: 1158px;
+padding-left: 15px;
+padding-right: 15px;
+margin: 0 auto;
+}
 /* --------------------------------------HEADER---------------------------------------- */
-/* .header {} */
+.header {
+    border-bottom: 1px solid #E7E9FC;
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
 .header-logo {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
@@ -24,13 +72,20 @@ a {
     line-height: 1.5;
     letter-spacing: 3%;
     color: #2E2F42;
-    
+    padding-right: 76px;
 }
 .header-logo-accent {
     color: #4D5AE5;
 }
-/* .header-navigation {} */
-/* .header-navigation-list {} */
+.header-navigation {
+    /* display: flex; */
+    flex-grow: 1;
+}
+.header-navigation-list {
+    display: flex;
+    gap: 40px;
+
+}
 /* .header-navigation-item {} */
 .header-navigation-link {
     font-size: 16px;
@@ -39,7 +94,18 @@ a {
     letter-spacing: 2%;
     color: #2E2F42;
 }
-/* .header-list {} */
+.header-navigation-link:hover,
+.header-navigation-link:focus,
+.header-navigation-link:active,
+.header-list-link:hover,
+.header-list-link:focus,
+.header-list-link:active {
+    color: #404bbf;
+}
+.header-list {
+    display: flex;
+    gap: 40px;
+}
 /* .header-list-item {} */
 .header-list-link {
     font-weight: 400;
@@ -53,86 +119,144 @@ a {
 .hero-section {
     background-color: #2E2F42;
 }
+.hero-container {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    /* padding: 188px 314px; */
+}
 .hero-title {
     font-weight: 700;
-    font-size: 56px;
-    line-height: 1.1;
-    letter-spacing: 2%;
+    font-size: 45px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
     text-align: center;
     color: #FFFFFF;
+    max-width: 496px;
+    margin: 0 auto;
+    margin-bottom: 48px;
 }
 .hero-button {
+    display: block;
     background-color: #4D5AE5;
     color: #FFFFFF;
-    text-align: center;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 4%;
+    letter-spacing: 0.04em;
     cursor: pointer;
+    padding: 16px 32px;
+    min-width: 169px;
+    height: 56px;
+    border-radius: 4px;
+    margin: 0 auto;
+    /* outline: none; */
+    border-color: transparent;
 }
+/* .hero-button:hover,
+.hero-button:focus {
+    background-color: #404bbf;
+} */
+ .hero-button:hover,
+ .hero-button:focus {
+    background-color: #404bbf;
+ }
 /* --------------------------------------ABOUT----------------------------------------- */
 /* .about-section {} */
 /* .about-title {} */
-/* .about-list {} */
+.about-container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.about-list {
+    display: flex;
+    gap: 24px;
+}
 /* .about-list-item {} */
 .about-list-header {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 .about-list-text {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
     color: #434455;
 }
 /* ---------------------------------------TEAM----------------------------------------- */
 .team-section {
     background-color: #E7E9FC;
 }
+.team-container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 .team-title {
     text-align: center;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.1;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
+    margin-bottom: 72px;
 }
-/* .team-list {} */
+.team-list {
+    display: flex;
+    gap: 24px;
+}
 /* .team-list-item {} */
-/* .team-list-image {} */
+.team-list-image {
+    margin-bottom: 24px;
+}
 .team-list-header {
+    text-align: center;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 .team-list-text {
+    text-align: center;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
     color: #434455;
 }
 /* -------------------------------------PORTFOLIO---------------------------------------- */
 /* .portfolio-section {} */
+.portfolio-container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 .portfolio-title {
     text-align: center;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.1;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
+    margin-bottom: 72px;
 }
-/* .portfolio-list {} */
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
 /* .portfolio-list-item {} */
 /* .portfolio-list-image {} */
+.portfolio-thumb {
+    border: 1px solid #e7e9fc;
+    padding: 32px 16px;
+}
 .portfolio-list-header {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 2%;
+    margin-bottom: 8px;
 }
 .portfolio-list-type {
     font-weight: 400;
@@ -145,6 +269,10 @@ a {
 .footer {
     background-color: #2E2F42;
 }
+.footer-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 .footer-logo {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
@@ -153,7 +281,7 @@ a {
     font-size: 18px;
     text-transform: uppercase;
     line-height: 1.2;
-    letter-spacing: 3%;
+    letter-spacing: 0.03em;
     color: #F4F4FD;
 }
 .footer-logo-accent {
@@ -163,9 +291,20 @@ a {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
     color: #F4F4FD;
+    max-width: 264px;
+    margin-top: 16px;
 }
 
+/* .check {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border: 5px dashed yellow;
+    padding: 10px;
+    margin: 15px;
+}
 
+ */
 
